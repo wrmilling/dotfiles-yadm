@@ -24,3 +24,6 @@ brew install vim
 
 print_header "Setup git"
 ~/.scripts/setupGit.sh
+
+print_header "Installing some basic utils"
+brew install htop tmux

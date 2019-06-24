@@ -24,3 +24,6 @@ sudo apt-get install vim
 
 print_header "Setup git"
 ~/.scripts/setupGit.sh
+
+print_header "Installing some basic utils"
+sudo apt-get install htop tmux
