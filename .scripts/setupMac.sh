@@ -15,4 +15,4 @@ yadm clone https://github.com/wrmilling/dotfiles.git
 
 print_header "Install zshi and set as default shell"
 brew install zsh
-chsh -s /usr/local/bin/zsh
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
