@@ -1,9 +1,9 @@
 #!/bin/sh
 
 function print_header() {
-  echo ##########
+  echo "##############################"
   echo $1
-  echo ##########
+  echo "##############################"
 }
 
 print_header "Ensure system is up to date"
@@ -25,5 +25,5 @@ sudo apt-get install vim
 print_header "Setup git"
 ~/.scripts/setupGit.sh
 
-print_header "Installing some basic utils"
+print_header "Using yadm bootstrap to complete setup"
 sudo apt-get install htop tmux

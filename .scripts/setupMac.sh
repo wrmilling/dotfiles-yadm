@@ -1,9 +1,9 @@
 #!/bin/sh
 
 function print_header() {
-  echo ##########
+  echo "##############################"
   echo $1
-  echo ##########
+  echo "##############################"
 }
 
 print_header "Install Homebrew"
@@ -11,7 +11,7 @@ print_header "Install Homebrew"
 
 print_header "Install yadm and clone the dotfiles repo"
 brew install yadm
-yadm clone https://github.com/wrmilling/dotfiles.git
+yadm clone https://github.com/wrmilling/dotfiles.git --no-bootstrap
 yadm submodule update --recursive
 
 print_header "Install zsh and set as default shell"
@@ -25,5 +25,6 @@ brew install vim
 print_header "Setup git"
 ~/.scripts/setupGit.sh
 
-print_header "Installing some basic utils"
-brew install htop tmux
+print_header "Using yadm bootstrap to complete setup"
+yadm bootstrap
+

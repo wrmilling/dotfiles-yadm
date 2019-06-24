@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# TODO: Determine system type (OS X / Linux)
+# TODO: Install basic utilities (htop, build utilities, etc)
+# TODO: Execute brewfile if exists
+
+function print_header() {
+  echo "##############################"
+  echo $1
+  echo "##############################"
+}
+
+cd "$HOME"
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Darwin" ]; then
+
+  print_header "Setting up for OS X"
+  
+  if [ -f "$HOME/.Brewfile" ]; then
+    print_header "Installing utilities via brew"
+    brew tap Homebrew/bundle
+    brew bundle --global
+  fi
+
+fi
+
