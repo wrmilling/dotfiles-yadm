@@ -53,4 +53,11 @@ fi
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+##############################
+# Java settings for OS X to openjdk 1.8
+##############################
+system_type=$(uname -s)
 
+if [  "$system_type" = "Darwin" ]; then
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+fi
