@@ -13,3 +13,6 @@ print_header "Install yadm and clone the dotfiles repo"
 sudo apt-get install yadm -y
 yadm clone https://github.com/wrmilling/dotfiles.git
 
+print_header "Install zsh and set as default shell"
+sudo apt-get install zsh
+chsh -s /bin/zsh
