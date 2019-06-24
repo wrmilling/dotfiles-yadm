@@ -47,3 +47,10 @@ if ! zgen saved; then
   zgen save
 fi
 
+##############################
+# Imports for language managers
+##############################
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+
