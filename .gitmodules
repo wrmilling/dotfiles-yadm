@@ -1,3 +1,6 @@
 [submodule ".zgen"]
 	path = .zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule ".vim"]
+	path = .vim
+	url = https://github.com/WRMilling/vim-config.git

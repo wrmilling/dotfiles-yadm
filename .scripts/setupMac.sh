@@ -12,7 +12,15 @@ print_header "Install Homebrew"
 print_header "Install yadm and clone the dotfiles repo"
 brew install yadm
 yadm clone https://github.com/wrmilling/dotfiles.git
+yadm submodule update --recursive
 
-print_header "Install zshi and set as default shell"
+print_header "Install zsh and set as default shell"
 brew install zsh
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
+print_header "Installing vim"
+brew install vim
+~/.vim/install.sh
+
+print_header "Setup git"
+~/.scripts/setupGit.sh
