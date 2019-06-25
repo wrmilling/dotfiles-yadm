@@ -68,3 +68,12 @@ system_type=$(uname -s)
 if [  "$system_type" = "Darwin" ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
+
+##############################
+# Replace default autocorrect for functions
+##############################
+unsetopt correct
+unsetopt correctall
+export DISABLE_CORRECTION="true"
+eval $(thefuck --alias f)
+
