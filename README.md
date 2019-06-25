@@ -1,6 +1,8 @@
 # dotfiles
 My personal dotfiles which will eventually target OS X, Linux, and WSL.
 
+![Terminal Screenshot](screenshot.png)
+
 ## Installation
 
 On OS X:  
