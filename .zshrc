@@ -48,6 +48,13 @@ if ! zgen saved; then
 fi
 
 ##############################
+# Aliases
+##############################
+
+# dit: Dotfiles Information Tracker
+alias dit=yadm
+
+##############################
 # Imports for language managers
 ##############################
 export NVM_DIR=~/.nvm
