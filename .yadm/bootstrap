@@ -24,5 +24,8 @@ if [ "$system_type" = "Darwin" ]; then
     brew bundle --global
   fi
 
+  print_header "installing fonts to $HOME/Library/Fonts"
+  cp -vf $HOME/.yadm/fonts/*.ttf $HOME/Library/Fonts
+
 fi
 
