@@ -57,8 +57,10 @@ alias dit=yadm
 ##############################
 # Imports for language managers
 ##############################
-export NVM_DIR=~/.nvm
+export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
+
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 ##############################
 # Java settings for OS X to openjdk 1.8
