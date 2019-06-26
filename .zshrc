@@ -79,3 +79,11 @@ unsetopt correctall
 export DISABLE_CORRECTION="true"
 eval $(thefuck --alias f)
 
+
+##############################
+# Source any work specific configurations if available
+##############################
+if [ -f "$HOME/.workrc" ]; then
+  source $HOME/.workrc
+fi
+
