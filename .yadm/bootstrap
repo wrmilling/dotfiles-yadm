@@ -31,5 +31,9 @@ if [ "$system_type" = "Darwin" ]; then
   defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
   defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
+  print_header "Redirecting iterm2's config file to local copy"
+  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$HOME/.config/iterm2"
+  defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 fi
 
