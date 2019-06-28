@@ -79,6 +79,12 @@ unsetopt correctall
 export DISABLE_CORRECTION="true"
 eval $(thefuck --alias f)
 
+##############################
+# Spaceship prompt configuration
+##############################
+export SPACESHIP_PROMPT_ADD_NEWLINE="true"
+export SPACESHIP_USER_SHOW="always"
+export SPACESHIP_USER_COLOR="blue"
 
 ##############################
 # Source any work specific configurations if available
