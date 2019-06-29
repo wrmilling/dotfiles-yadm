@@ -3,6 +3,8 @@
 ##############################
 source "${HOME}/.zgen/zgen.zsh"
 
+system_type=$(uname -s)
+
 # Setup zgen if init script does not exist
 if ! zgen saved; then
   echo "Generating a zgen save"
@@ -57,16 +59,19 @@ alias dit=yadm
 ##############################
 # Imports for language managers
 ##############################
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
+if [ "$system_type" = "Darwin" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  source $(brew --prefix nvm)/nvm.sh
 
-export PATH="$HOME/.rbenv/shims:$PATH"
+  export PATH="$HOME/.rbenv/shims:$PATH"
+else 
+  export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+fi
 
 ##############################
 # Java settings for OS X to openjdk 1.8
 ##############################
-system_type=$(uname -s)
-
 if [  "$system_type" = "Darwin" ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
