@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function print_header() {
   echo "##############################"
@@ -7,7 +7,7 @@ function print_header() {
 }
 
 print_header "Ensure system is up to date"
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install git -y
 
 print_header "Install yadm and clone the dotfiles repo"
 sudo apt-get install yadm -y
@@ -26,4 +26,4 @@ print_header "Setup git"
 ~/.scripts/setupGit.sh
 
 print_header "Using yadm bootstrap to complete setup"
-sudo apt-get install htop tmux
+yadm bootstrap
