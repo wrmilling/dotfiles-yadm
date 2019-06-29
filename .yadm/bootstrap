@@ -37,6 +37,19 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  cat ~/.Debfile | xargs sudo apt-get install -y
+  linux_type=$(uname -r)
+
+  print_header "Installing utilities via apt-get"
+  
+  if [ -f "$HOME/.Debfile" ]; then 
+    cat ~/.Debfile | xargs sudo apt-get install -y
+  fi
+
+  print_header "Installing fonts"
+
+  if [[ $linux_type == *"Microsoft"* ]]; then 
+    echo "You will need to install fonts on your own and configure in the terminal for WSL / Windows."
+  fi
+
 fi
 
