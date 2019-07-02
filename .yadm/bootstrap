@@ -19,6 +19,13 @@ if [ "$system_type" = "Darwin" ]; then
   print_header "Setting up for OS X"
   
   if [ -f "$HOME/.Brewfile" ]; then
+    print_header "Setting up some dependencies for weechat / wee-slack"
+    /usr/local/bin/pip install websocket-client
+    mkdir -p $HOME/.weechat/python/autoload
+    cd $HOME/.weechat/python
+    curl -O https://raw.githubusercontent.com/wee-slack/wee-slack/master/wee_slack.py
+    ln -s $HOME/.weechat/python/wee_slack.py $HOME/.weechat/python/autoload
+    
     print_header "Installing utilities via brew"
     brew tap Homebrew/bundle
     brew bundle --global
