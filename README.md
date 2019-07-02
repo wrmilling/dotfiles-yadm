@@ -5,11 +5,10 @@ My personal dotfiles which will eventually target OS X, Linux, and WSL.
 
 ## Installation
 
-On OS X:  
+**On OS X:**  
 `curl -fsSL https://raw.githubusercontent.com/WRMilling/dotfiles/master/.scripts/setupMac.sh | sh -`
 
-On Linux/WSL:  
-
+**On Linux/WSL:**  
 First download the setup script (this can be deleted later).
 
 `wget https://raw.githubusercontent.com/WRMilling/dotfiles/master/.scripts/setupLinux.sh`
