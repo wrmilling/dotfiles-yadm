@@ -23,7 +23,8 @@ aliases = [
   'fixup "commit --fixup"',
   'squash "commit --squash"',
   'unstage "reset HEAD"',
-  'rum "rebase master@{u}"'
+  'rum "rebase master@{u}"',
+  'pom "push origin master"'
 ]
 
 aliases.each do |full_alias|
