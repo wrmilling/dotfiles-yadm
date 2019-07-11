@@ -67,8 +67,11 @@ alias dit=yadm
 # Extra Path Directories
 ##############################
 
-export PATH="$HOME/.yadm/bin/:$PATH"
-
+if [ "$system_type" = "Darwin" ]; then
+  export PATH="$HOME/.yadm/darwin-bin/:$PATH"
+else
+  export PATH="$HOME/.yadm/linux-bin/:$PATH"
+fi
 ##############################
 # Imports for language managers
 ##############################
