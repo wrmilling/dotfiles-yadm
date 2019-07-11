@@ -7,7 +7,7 @@ function print_header() {
 }
 
 print_header "Ensure system is up to date"
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install git -y
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install git curl -y
 
 print_header "Install yadm and clone the dotfiles repo"
 sudo apt-get install yadm -y
@@ -21,6 +21,9 @@ chsh -s /bin/zsh
 print_header "Install vim"
 sudo apt-get install vim
 ~/.vim/install.sh
+
+print_header "Install linux brew"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 print_header "Setup git"
 ~/.scripts/setupGit.sh

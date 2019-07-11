@@ -4,6 +4,7 @@
 source "${HOME}/.zgen/zgen.zsh"
 
 system_type=$(uname -s)
+linux_type=$(uname -r)
 
 # Setup zgen if init script does not exist
 if ! zgen saved; then
@@ -50,11 +51,23 @@ if ! zgen saved; then
 fi
 
 ##############################
+# General Environment
+##############################
+
+export EDITOR="vim"
+
+##############################
 # Aliases
 ##############################
 
 # dit: Dotfiles Information Tracker
 alias dit=yadm
+
+##############################
+# Extra Path Directories
+##############################
+
+export PATH="$HOME/.yadm/bin/:$PATH"
 
 ##############################
 # Imports for language managers
@@ -67,6 +80,11 @@ if [ "$system_type" = "Darwin" ]; then
 else 
   export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+  if [[ $linux_type == *"microsoft"* ]]; then
+    # WSL Specific Settings
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  fi
 fi
 
 ##############################

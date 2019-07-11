@@ -24,7 +24,8 @@ aliases = [
   'squash "commit --squash"',
   'unstage "reset HEAD"',
   'rum "rebase master@{u}"',
-  'pom "push origin master"'
+  'pom "push origin master"',
+  'bt "bug termui"'
 ]
 
 aliases.each do |full_alias|
