@@ -7,10 +7,11 @@ function print_header() {
 }
 
 print_header "Ensure system is up to date"
+grep -qxF 'deb http://deb.debian.org/debian buster-backports main contrib non-free' /etc/apt/sources.list || sudo echo 'deb http://deb.debian.org/debian buster-backports main contrib non-free' >> /etc/apt/sources.list
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install git curl -y
 
 print_header "Install yadm and clone the dotfiles repo"
-sudo apt-get install yadm -y
+sudo apt-get -t stretch-backports install yadm -y
 yadm clone git@github.com:WRMilling/dotfiles.git
 yadm submodule update --init --recursive
 

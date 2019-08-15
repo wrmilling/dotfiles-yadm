@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# TODO: Determine system type (OS X / Linux)
-# TODO: Install basic utilities (htop, build utilities, etc)
-# TODO: Execute brewfile if exists
-
 function print_header() {
   echo "##############################"
   echo $1
@@ -54,7 +50,7 @@ if [ "$system_type" = "Linux" ]; then
 
   print_header "Installing fonts"
 
-  if [[ $linux_type == *"Microsoft"* ]]; then 
+  if [[ $linux_type == *"microsoft"* ]]; then 
     echo "You will need to install fonts on your own and configure in the terminal for WSL / Windows."
   fi
 
