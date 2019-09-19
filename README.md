@@ -21,3 +21,6 @@ and execute:
 
 `./setupLinux.sh`
 
+## License
+
+This project is released under the Beerware license. Please see the [LICENSE](LICENSE) file for full license text.
