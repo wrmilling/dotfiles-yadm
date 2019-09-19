@@ -28,7 +28,7 @@ fi
 
 # General Setup
 print_header "Setup git"
-./components/git.sh
+~/.scripts/components/git.sh
 
 print_header "Using yadm bootstrap to complete setup"
 yadm bootstrap
