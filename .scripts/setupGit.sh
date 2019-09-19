@@ -25,6 +25,7 @@ aliases = [
   'unstage "reset HEAD"',
   'rum "rebase master@{u}"',
   'pom "push origin master"',
+  'poh "push origin HEAD"',
   'bt "bug termui"'
 ]
 
