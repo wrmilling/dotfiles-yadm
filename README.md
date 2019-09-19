@@ -5,21 +5,11 @@ My personal dotfiles which will eventually target OS X, Linux, and WSL.
 
 ## Installation
 
-**On OS X:**  
-`curl -fsSL https://raw.githubusercontent.com/WRMilling/dotfiles/master/.scripts/setupMac.sh | sh -`
+`curl -fsSL https://raw.githubusercontent.com/WRMilling/dotfiles/master/.scripts/setup.sh | sh -`
 
-**On Linux/WSL:**  
-First download the setup script (this can be deleted later).
+## Support
 
-`wget https://raw.githubusercontent.com/WRMilling/dotfiles/master/.scripts/setupLinux.sh`
-
-Ensure it is executable:
-
-`chmod u+x setupLinux.sh`
-
-and execute: 
-
-`./setupLinux.sh`
+Do you use this? Feel free to open an [Issue](https://github.com/WRMilling/dotfiles/issues/new) if you run into anything weird. I can't guarantee speedy responses, but this is still something I am happy to support. 
 
 ## License
 
