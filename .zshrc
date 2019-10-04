@@ -73,13 +73,16 @@ else
   export PATH="$HOME/.yadm/linux-bin/:$PATH"
 fi
 ##############################
-# Imports for language managers
+# Imports for language/tool managers
 ##############################
 if [ "$system_type" = "Darwin" ]; then
   export NVM_DIR="$HOME/.nvm"
   source $(brew --prefix nvm)/nvm.sh
 
   export PATH="$HOME/.rbenv/shims:$PATH"
+
+  # Added by Travis, installed via Brew  
+  [ -f /Users/wrm6768/.travis/travis.sh ] && source /Users/wrm6768/.travis/travis.sh
 else 
   export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
