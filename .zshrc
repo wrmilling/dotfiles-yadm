@@ -63,6 +63,9 @@ export EDITOR="vim"
 # dit: Dotfiles Information Tracker
 alias dit=yadm
 
+# Allow sl to function
+unalias sl
+
 ##############################
 # Extra Path Directories
 ##############################
