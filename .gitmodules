@@ -4,3 +4,6 @@
 [submodule ".vim"]
 	path = .vim
 	url = https://github.com/WRMilling/vim-config.git
+[submodule ".zsh"]
+	path = .zsh
+	url = https://github.com/WRMilling/zsh-config.git
