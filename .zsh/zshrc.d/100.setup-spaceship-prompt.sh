@@ -1,3 +1,0 @@
-export SPACESHIP_PROMPT_ADD_NEWLINE="true"
-export SPACESHIP_USER_SHOW="always"
-export SPACESHIP_USER_COLOR="blue"

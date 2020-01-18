@@ -1,1 +1,0 @@
-alias dit=yadm
