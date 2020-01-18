@@ -11,7 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 print_header "Install zsh and set as default shell"
 sudo apt-get install zsh
-chsh -s /bin/zsh
+~/.zsh/install.sh
 
 print_header "Install vim"
 sudo apt-get install vim
