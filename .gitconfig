@@ -1,0 +1,31 @@
+[user]
+  name = Winston R. Milling
+  email = Winston@Milli.ng
+  signingkey = 0xA44A3B1758373973
+[alias]
+  st = status
+  di = diff
+  co = checkout
+  cm = commit
+  cs = commit -S
+  csf = commit -S --amend --no-edit
+  br = branch
+  sta = stash
+  llog = log --date=local
+  flog = log --pretty=fuller --decorate
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> [%G?]%Creset' --abbrev-commit --date=relative
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  blog = log origin/master... --left-right
+  ds = diff --staged
+  fixup = commit --fixup
+  squash = commit --squash
+  unstage = reset HEAD
+  run = rebase master@{u}
+  pom = push origin master
+  poh = push origin HEAD
+[pull]
+	ff = only
+[commit]
+	gpgsign = true
+
