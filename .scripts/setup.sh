@@ -9,7 +9,7 @@ function print_header() {
 # OS Specific Setup with yadm
 if [[ "$OSTYPE" == "darwin"* ]]; then
   print_header "Install Homebrew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
   
   print_header "Install yadm and clone the dotfiles repo"
   brew install yadm
