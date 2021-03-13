@@ -6,4 +6,7 @@
 	url = https://github.com/WRMilling/vim-config.git
 [submodule ".zsh"]
 	path = .zsh
-	url = https://github.com/WRMilling/zsh-config.git
+  url = https://github.com/WRMilling/zsh-config.git
+[submodule "tmux-better-mouse-mode"]
+	path = .config/tmux/plugins/tmux-better-mouse-mode 
+  url = https://github.com/NHDaly/tmux-better-mouse-mode.git
