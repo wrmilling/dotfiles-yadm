@@ -1,4 +1,9 @@
 # dotfiles
+
+Currently in the process of investigating [chezmoi](https://www.chezmoi.io/) and have renamed the current repo to `dotfiles-yadm` so that [dotfiles](https://github.com/wrmilling/dotfiles) can be used by chezmoi. 
+
+---
+
 My personal dotfiles which will eventually target OS X, Linux, and WSL.
 
 ![Terminal Screenshot](screenshot.png)
