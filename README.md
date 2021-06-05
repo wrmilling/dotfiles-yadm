@@ -1,5 +1,7 @@
 # dotfiles
 
+06-05-2021 - Archiving in favor of chezmoi. 
+
 Currently in the process of investigating [chezmoi](https://www.chezmoi.io/) and have renamed the current repo to `dotfiles-yadm` so that [dotfiles](https://github.com/wrmilling/dotfiles) can be used by chezmoi. 
 
 ---
